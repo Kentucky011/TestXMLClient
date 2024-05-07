@@ -1,15 +1,6 @@
-
-
-
-case class MyResponseFormat(rest: Rest,
-                          data: Data,
-                          restOperationResult: RestOperationResult,
-                          validate: Validate)
-                          extends MyProtocol
-
 case class Rest(
-                 data: List[Data],
-                 restId: String
+                 restId: String,
+                 data: List[Data]
                )
 
 case class Data(
@@ -19,8 +10,8 @@ case class Data(
                )
 
 case class RestOperationResult(
-                                data: Option[List[Rest]],
                                 status: String,
+                                data: Option[List[Rest]],
                                 error: Option[String]
                               )
 
